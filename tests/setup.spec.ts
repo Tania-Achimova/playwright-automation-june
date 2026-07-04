@@ -88,7 +88,7 @@ test.describe("SOFT ASSERTIONS", () => {
     });
 });
 
-test.describe.only("SCREENSHOTS AS DEBUGGING AIDS", () => {
+test.describe("SCREENSHOTS AS DEBUGGING AIDS", () => {
 
     test('Capture a screenshot of the qa-practice page and assert URL', async ({ page }) => {
         await page.goto("/qa-practice");
