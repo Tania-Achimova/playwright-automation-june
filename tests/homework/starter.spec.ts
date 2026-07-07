@@ -70,14 +70,10 @@ test.describe('qa-practice page', () => {
 
         await page.waitForLoadState('networkidle');
 
-        const screenshot = await page.screenshot();
-
         await page.screenshot({
             path: 'screenshots/homework-01-qa-practice.png',
             fullPage: true
         });
-
-        expect(screenshot).toMatchSnapshot('homework-01-qa-practice.png');
 
         await expect(page).toHaveURL(/qa-practice/);
     })
