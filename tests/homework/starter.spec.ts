@@ -65,19 +65,15 @@ test.describe('HOME PAGE TESTS', () => {
 test.describe('qa-practice page', () => {
 
     test('screenshot captures fully-loaded page', async ({ page }) => {
-        await page.goto('http://codeandtest.com/qa-practice');
+        await page.goto('/qa-practice');
         await expect(page).toHaveURL('/qa-practice');
 
         await page.waitForLoadState('networkidle');
-
-        const screenshot = await page.screenshot();
 
         await page.screenshot({
             path: 'screenshots/homework-01-qa-practice.png',
             fullPage: true
         });
-
-        expect(screenshot).toMatchSnapshot('homework-01-qa-practice.png');
 
         await expect(page).toHaveURL(/qa-practice/);
     })

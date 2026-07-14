@@ -81,8 +81,8 @@ test.describe("SOFT ASSERTIONS", () => {
     test('Auth page has all 4 expected fields - collect all failures and report at the end', async ({ page }) => {
         await page.goto("/auth");
         
-        await expect.soft(page.getByPlaceholder("Enter Usernames")).toBeVisible();
-        await expect.soft(page.getByPlaceholder("Enter Passwords")).toBeVisible();
+        await expect.soft(page.getByPlaceholder("Enter Username")).toBeVisible();
+        await expect.soft(page.getByPlaceholder("Enter Password")).toBeVisible();
         await expect(page.getByRole("button", { name: "SIGNIN" })).toBeVisible();
         await expect(page.getByRole("button", { name: "Sign Up" })).toBeVisible();
     });
